@@ -1,0 +1,64 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0 auto;
+    margin: 25px 0;
+}
+
+mat-card {
+    background-color: #fff;
+    margin: 20px;
+}
+
+.description {
+    display: flex;
+
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+.description:hover {
+    p {
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
+}
+
+.add-task {
+    background-color: #639605;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 380px;
+    height: 46px;
+}
+
+.page-button {
+    border: none;
+    box-shadow: 0 1px 3px #0000001a;
+    background-color: #639605;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+
+    mat-icon {
+        color: #F4F4F4;
+    }
+}
+
+::ng-deep .mat-mdc-dialog-surface {
+    border-radius: 5px !important;
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}

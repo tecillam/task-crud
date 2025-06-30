@@ -1,0 +1,35 @@
+<div class="add-task-container">
+    <div class="row d-flex justify-content-between">
+        <div class="col">
+            <h2>Añadir tarea</h2>
+        </div>
+        <div class="col d-flex justify-content-end"><mat-icon (click)="closeClick()">close</mat-icon></div>
+    </div>
+    <form [formGroup]="taskForm">
+        <div class="row mb-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Nomber</mat-label>
+                <input matInput type="text" formControlName="title" placeholder="Nombre">
+                @if (taskForm.get('title')?.hasError('maxlength') ||
+                taskForm.get('title')?.hasError('required')){
+                <mat-error>Campo obligatoriono, máximo 20 caracteres.</mat-error>
+                }
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Descripción</mat-label>
+                <textarea matInput type="text" formControlName="description" placeholder="Descripción"
+                    rows="8"></textarea>
+                @if (taskForm.get('description')?.hasError('minlength') ||
+                taskForm.get('description')?.hasError('required')){
+                <mat-error>Campo obligatoriono. No se permiten menos de 10 caracteres.</mat-error>
+                }
+            </mat-form-field>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <div class="col"><button class="cancel" (click)="closeClick()">Cancelar</button></div>
+            <div class="col d-flex justify-content-end"><button class="save" (click)="onSubmit()">Guardar</button></div>
+        </div>
+    </form>
+</div>

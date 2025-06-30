@@ -1,0 +1,27 @@
+.add-task-container {
+    background-color: #fff;
+    padding: 10px;
+
+    h2 {
+        font-size: 20px;
+        color: #333333;
+        font-weight: 700;
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+        width: 163px;
+        height: 36px;
+    }
+
+    .save {
+        background-color: #639605;
+        color: #fff;
+    }
+
+    .cancel {
+        background-color: #FFFFFF;
+        color: #B3B3B3;
+    }
+}
