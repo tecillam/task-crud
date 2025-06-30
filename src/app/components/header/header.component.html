@@ -1,0 +1,18 @@
+<div class="header-top d-flex w-100 justify-content-between">
+    <button><mat-icon>menu</mat-icon></button>
+    <button><mat-icon>search</mat-icon></button>
+    <div class="title-logo"><img src="assets/imgs/logo.png" alt="tienda animal"></div>
+    <button><mat-icon>person_outline</mat-icon></button>
+    <button><mat-icon>shopping_cart</mat-icon></button>
+</div>
+<mat-divider></mat-divider>
+<nav class="nav-bar">
+    <ul>
+        <li routerLink="/my-data" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Mis datos
+        </li>
+        <li routerLink="/my-tasks" routerLinkActive="active">Mis tareas</li>
+        <li routerLink="/my-devolutions" routerLinkActive="active">Mis devoluciones</li>
+        <li routerLink="/my-comunications" routerLinkActive="active">Mis comunicaciones</li>
+        <li routerLink="/my-best-friends" routerLinkActive="active">Mis mejores amigos</li>
+    </ul>
+</nav>

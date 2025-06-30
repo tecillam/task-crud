@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color: #F4F4F4;
+    color: #333;
+}
+
+.app-container {
+    margin: 0 auto;
+    max-width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    overflow: hidden;
+
+    .title-logo {
+        height: 48px;
+        min-height: 12px;
+        display: flex;
+        align-items: center;
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+    }
+}
+
+mat-divider {
+    border-top-color: #DBDBDB !important;
+}
+
+.nav-bar {
+    background-color: transparent;
+    border-bottom: 1px solid #0000001F;
+    box-shadow: 0 2px 5px #0000001a;
+
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        justify-content: space-around;
+        align-items: end;
+        height: 48px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        li {
+            margin: 0 25px;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            background-color: transparent;
+            border: none;
+            font-size: 17px;
+            font-weight: 600;
+            color: #555555;
+            cursor: pointer;
+            white-space: nowrap;
+
+            &.active {
+                color: #639605;
+                border-bottom: 3px solid #639605;
+            }
+
+
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        max-width: 480px;
+        min-height: 100vh;
+    }
+
+    .mat-typography h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #555555;
+    }
+
+    .header-top {
+        .title-logo {
+            height: 24px;
+            min-height: 12px;
+            max-width: 150px;
+            min-width: 75px;
+            display: flex;
+            align-items: center;
+
+            img {
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        mat-icon {
+            scale: 0.8;
+        }
+    }
+
+    .nav-bar ul li {
+        font-size: 14px;
+    }
+}
